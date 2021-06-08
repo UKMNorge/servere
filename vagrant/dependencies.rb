@@ -33,6 +33,9 @@ if ARGV.include?("up") || (ARGV.include?("reload") && ARGV.include?("--provision
     
     # SSL init.sls (certificates)
     requireDataPackageFiles('../datapackage/', 'pillar/ssl/', ['init.sls'])
+    
+    # Videoconverter database files
+    requireDataPackageFiles('../datapackage/', 'salt/ukmbox-videoconverter/files/', ['ukmdev_videoconverter.sql'])
 
     if( $dataPackageMissing.length() > 0 )
         puts "Missing required file(s) in #{$localNFSpath}datapackage/:".red
