@@ -109,7 +109,7 @@ require_once('UKM/Autoloader.php');
 **OBS:** fordi [UKMDesign](https://github.com/UKMNorge/UKMDesign) benytter https://ukm.dev/wp-content/themes/UKMDesign/, og ikke https://grafikk.ukm.dev/ for å hente inn jQuery, css osv, legger lite-maskinen til `ukm.dev` i hostsfilen. Hvis du kjører både lite og main samtidig, bør du manuelt kommentere ut denne linjen inntil videre. Problemet skal rettes i [UKMNorge/UKMapi]().
 
 ## Main
-"Hoved-serveren vår". Her kjører vi wordpress (https://ukm.dev), og de fleste subdomenene på *.ukm.dev. Gir deg full tilgang til arrangørsystem, påmeldingssystem, nettsider osv. (og fungerer ikke atm 😬)
+"Hoved-serveren vår". Her kjører vi wordpress (https://ukm.dev), og de fleste subdomenene på *.ukm.dev. Gir deg full tilgang til arrangørsystem, påmeldingssystem, nettsider osv.
 
 
 ## Playback
