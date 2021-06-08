@@ -31,7 +31,7 @@ box_tempdev_vhost:
         - watch_in:
             - service: apache
 
-ukmdesign_git:
+ukmdesign_git_lite:
     git.latest:
         - name: https://github.com/UKMNorge/UKMDesign.git
         - target: /var/www/wordpress/wp-content/themes/UKMDesign
