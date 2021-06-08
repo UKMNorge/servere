@@ -35,7 +35,9 @@
 			"neilbrayfield.php-docblocker",
 			"rebornix.ruby",
 			"mblode.twig-language-2",
-			"wingrunr21.vscode-ruby"
+			"wingrunr21.vscode-ruby",
+			"korekontrol.saltstack",
+			"sibiraj-s.vscode-scss-formatter"
 		]
 	},
 	"recommendations": [
@@ -45,6 +47,8 @@
 		"neilbrayfield.php-docblocker",
 		"rebornix.ruby",
 		"mblode.twig-language-2",
-		"wingrunr21.vscode-ruby"
+		"wingrunr21.vscode-ruby",
+		"korekontrol.saltstack",
+		"sibiraj-s.vscode-scss-formatter"
 	]
 }
