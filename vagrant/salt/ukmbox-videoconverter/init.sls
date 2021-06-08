@@ -3,10 +3,12 @@
 
 include:
     - apache
+    - composer
     - ssl
     - mysql
     - ffmpeg
     - ukmlib.config
+    - ukmbox-videoconverter.ukmlib-files
     - ukmbox-videoconverter.database
 
 box-videoconverter-www-folder:

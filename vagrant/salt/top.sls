@@ -43,6 +43,7 @@ base:
     'roles:videoconverter':
         - match: grain
         - apache
+        - composer
         - ffmpeg
         - ukmbox-videoconverter
 
