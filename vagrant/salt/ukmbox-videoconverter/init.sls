@@ -8,8 +8,8 @@ include:
     - mysql
     - ffmpeg
     - ukmlib.config
-    - ukmbox-videoconverter.ukmlib-files
     - ukmbox-videoconverter.database
+    - ukmbox-videoconverter.ukmlib-files
 
 box-videoconverter-www-folder:
     file.directory:
