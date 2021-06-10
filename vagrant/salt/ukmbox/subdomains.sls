@@ -33,7 +33,7 @@ ukm-subdomain-{{subdomain}}-parameters:
 ukm-subdomain-{{subdomain}}-composer:
     composer.installed:
         - no_dev: false
-        - cwd: /var/www/{{subdomain}}
+        - name: /var/www/{{subdomain}}/composer.json
         - require:
             - git: ukm-subdomain-{{subdomain}}-git
             - cmd: install-composer
