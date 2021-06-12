@@ -51,6 +51,8 @@ define('UKM_ID_DB_WRITE_USER', '{{ ukm.database.id.users.user_write.name }}');
 define('UKM_ID_DB_WRITE_PASSWORD', '{{ ukm.database.id.users.user_write.pass }}');
 
 # VIDEOCONVERTER
+define('UKM_VIDEOCONVERTER_DB_HOST', '{{ videoconverter.database.host }}');
+define('UKM_VIDEOCONVERTER_DB_NAME', '{{ videoconverter.database.name }}');
 define('UKM_VIDEOCONVERTER_DB_USER', '{{ videoconverter.database.user }}');
 define('UKM_VIDEOCONVERTER_DB_PASS', '{{ videoconverter.database.pass }}');
 /* Shared secret needed to upload to the videostorage server */

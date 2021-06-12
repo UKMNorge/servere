@@ -13,9 +13,11 @@ def shareAndConfigureSubdomains(boxName, box, config)
     if File.exist?(File.expand_path(pillarFile))
         pillarSubdomainConfig = YAML.load_file(pillarFile)
 
-        pillarSubdomainConfig['subdomains'].each do |subdomain, domainData|
-            share(box, boxName+'/'+domainData['subdomain'], '/var/www/'+domainData['subdomain']+'/')
-            hostname_aliases << domainData['subdomain']+".ukm.dev"
+        if pillarSubdomainConfig.kind_of?(Array)
+            pillarSubdomainConfig['subdomains'].each do |subdomain, domainData|
+                share(box, boxName+'/'+domainData['subdomain'], '/var/www/'+domainData['subdomain']+'/')
+                hostname_aliases << domainData['subdomain']+".ukm.dev"
+            end
         end
     end
     box.hostmanager.aliases = hostname_aliases

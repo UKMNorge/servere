@@ -26,6 +26,13 @@ base:
     'roles:videoconverter':
         - match: grain
         - ukm
+        - ukmtv
+        - php
+
+    'roles:videostorage':
+        - match: grain
+        - ukm
+        - ukmtv
         - php
         
     'vagrant':

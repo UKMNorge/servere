@@ -8,8 +8,8 @@ include:
     - mysql
     - ffmpeg
     - ukmlib.config
+    - ukmlib.files
     - ukmbox-videoconverter.database
-    - ukmbox-videoconverter.ukmlib-files
 
 box-videoconverter-www-folder:
     file.directory:
@@ -39,6 +39,7 @@ videoconverter:
     git.latest:
         - name: https://github.com/UKMNorge/videoconverter.git
         - target: /var/www/videoconverter
+        - force_clone: true
         - require:
             - pkg: videoconverter-deps
 
@@ -64,15 +65,7 @@ videoconverter-cron-{{ cron_target }}:
 
 
 {% for dir in [
-    'store_hq',
-    'store_temp_convert',
-    'store_temp_converting',
-    'store_temp_converting_pqt',
-    'store_temp_transfer',
-    'store_temp_transferring',
-    'temp_reconvert_originals',
     'temp_storage',
-    'temp_videoserver_originals',
     ] %}
 videoconverter-dir-{{ dir }}:
     file.directory:

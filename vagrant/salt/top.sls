@@ -49,7 +49,9 @@ base:
 
     'roles:videostorage':
         - match: grain
-        - videostorage
+        - apache
+        - ukmlib.config
+        - ukmbox-videostorage
 
     'roles:videocache':
         - match: grain

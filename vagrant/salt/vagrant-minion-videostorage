@@ -1,0 +1,6 @@
+id: vagrant
+file_client: local
+grains:
+    hostname: video.ukm.dev
+    roles:
+        - videostorage

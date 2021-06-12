@@ -19,6 +19,10 @@
 		{
 			"path": "shared/videoconverter/videoconverter",
 			"name": "VM: videoconverter"
+		},
+		{
+			"path": "shared/videostorage",
+			"name": "VM: videostorage"
 		}
 	],
 	"settings": {

@@ -4,6 +4,7 @@ hostname:
         - name: hostname {{ grains['host'] }}
 {% endif %}
 
+{#
 videoconverter-host:
     host.present:
         - ip: 10.0.10.11
@@ -30,3 +31,4 @@ cache-host:
     host.present:
         - ip: 10.0.10.13
         - name: cache.ukm.dev
+#}
