@@ -31,3 +31,8 @@ https://github.com/UKMNorge/videostorage.git:
     git.latest:
         - name: https://github.com/UKMNorge/videostorage.git
         - target: /var/www/videostorage
+
+videostorage-storage-dir:
+    file.directory:
+        - name: /var/www/videostorage/ukmno
+        - mode: 775
