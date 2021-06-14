@@ -50,13 +50,7 @@ apache-headers:
         - require:
             - pkg: apache
 
-videoconverter-cron-final:
-    cron.present:
-        - name: wget -O  - http://localhost/cron/convert_final.cron.php
-        - minute: "*/2"
-        - identifier: cron_final
-
-{% for cron_target in ['convert_first', 'store'] %}
+{% for cron_target in ['convert_first','convert_second','convert_archive', 'store', 'archive'] %}
 videoconverter-cron-{{ cron_target }}:
     cron.present:
         - name: wget -O - http://localhost/cron/{{ cron_target }}.cron.php
