@@ -17,7 +17,7 @@ if doAbort
 end
 
 ## REQUIRE DATA PACKAGE FILES IF BRINGING UP OR PROVISIONING VM
-if ARGV.include?("up") || ARGV.include("provision") || (ARGV.include?("reload") && ARGV.include?("--provision"))
+if ARGV.include?("up") || ARGV.include?("provision") || (ARGV.include?("reload") && ARGV.include?("--provision"))
     $dataPackageMissing = []
 
     caFile = File.expand_path("../datapackage/UKMNorgeCA.pem" )

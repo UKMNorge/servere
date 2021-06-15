@@ -14,3 +14,4 @@ shared/*
 vagrant/salt/ukmbox-main/files/uploads.tar.gz
 vagrant/salt/ukmlib/files/ukmdev_dev_ss3.sql
 vagrant/salt/ukmlib/files/ukmdev_dev_wp.sql
+vagrant/salt/ukmbox-main/files/plugins.tar.gz
