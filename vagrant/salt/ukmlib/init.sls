@@ -4,6 +4,7 @@ include:
     - apache
     - ssl
     - composer
+    - ukmlib.files
     - ukmlib.config
     - ukmlib.database
     - ukmlib.includes
