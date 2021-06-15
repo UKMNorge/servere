@@ -29,7 +29,7 @@ if ARGV.include?("up") || (ARGV.include?("reload") && ARGV.include?("--provision
     requireDataPackageFiles('../datapackage/', 'salt/ukmlib/files/', ['ukmdev_dev_ss3.sql','ukmdev_dev_wp.sql','ukmdev_dev_id.sql'])
 
     # UKMbox-main wordpress
-    requireDataPackageFiles('../datapackage/', 'salt/ukmbox-main/files/', ['uploads.tar.gz'])
+    requireDataPackageFiles('../datapackage/', 'salt/ukmbox-main/files/', ['uploads.tar.gz','plugins.tar.gz'])
     
     # SSL init.sls (certificates)
     requireDataPackageFiles('../datapackage/', 'pillar/ssl/', ['init.sls'])

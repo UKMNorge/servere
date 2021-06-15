@@ -14,12 +14,11 @@ https://github.com/UKMNorge/{{ repo }}.git:
 ## ADD NON-GITHUB PLUGINS
 ukm-wordpress-plugins:
     file.managed:
-        - name: /usr/local/src/ukmwpplugins.tar.gz
-        - source: http://dev.ukm.no/vagrant/ukmwpplugins.tar.gz
-        - source_hash: sha1=a5ee8b5902dea76a1debbe8296ae2a3fc4305ee4
-
+        - name: /usr/local/src/plugins.tar.gz
+        - source: salt://ukmbox-main/files/plugins.tar.gz
+    
     cmd.wait:
-        - name: tar xf /usr/local/src/ukmwpplugins.tar.gz -C /var/www/wordpress/wp-content/plugins --strip 1 --no-same-permissions --no-same-owner
+        - name: tar xf /usr/local/src/plugins.tar.gz -C /var/www/wordpress/wp-content/plugins --strip 1 --no-same-permissions --no-same-owner
         - watch:
             - file: ukm-wordpress-plugins
 
