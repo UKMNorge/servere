@@ -16,7 +16,7 @@ ukmlib-includes-composer:
         - cwd: /etc/php-libraries/
         - require:
             - ukmlib-includes-composerfile
-            - composer
+            - install-composer
 
 ## PHP LIBRARIES SYMLINK TO PHP INCLUDES
 /etc/php-includes/ICS:

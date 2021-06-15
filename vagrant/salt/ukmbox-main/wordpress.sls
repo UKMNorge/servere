@@ -88,5 +88,5 @@ ukmdesignwordpress-composer:
         - name: composer install
         - cwd: /var/www/wordpress/wp-content/themes/UKMDesignWordpress
         - require:
-            - composer
+            - install-composer
             - ukmdesignwordpress-git
