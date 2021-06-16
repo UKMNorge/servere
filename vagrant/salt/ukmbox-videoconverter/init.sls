@@ -60,6 +60,7 @@ videoconverter-cron-{{ cron_target }}:
 
 {% for dir in [
     'temp_storage',
+    'log'
     ] %}
 videoconverter-dir-{{ dir }}:
     file.directory:
@@ -72,6 +73,7 @@ videoconverter-dir-{{ dir }}:
     'convert',
     'converted',
     'log',
+    'inbox',
     'store',
     'uploaded',
     'x264',
