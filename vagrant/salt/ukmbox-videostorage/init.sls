@@ -14,7 +14,7 @@ box-videostorage-vhost:
         - source: salt://apache/files/vhost.conf
         - template: jinja
         - defaults:
-            hostname: videostorage.ukm.dev
+            hostname: video.ukm.dev
             document_root: videostorage/
         - require:
             - pkg: apache
