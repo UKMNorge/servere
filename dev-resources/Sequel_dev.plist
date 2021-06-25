@@ -139,6 +139,92 @@
 					<key>user</key>
 					<string>root</string>
 				</dict>
+				<dict>
+					<key>colorIndex</key>
+					<integer>3</integer>
+					<key>database</key>
+					<string>ukmdev_id</string>
+					<key>host</key>
+					<string>127.0.0.1</string>
+					<key>id</key>
+					<integer>7893701256179976061</integer>
+					<key>name</key>
+					<string>DEV ID</string>
+					<key>port</key>
+					<string></string>
+					<key>socket</key>
+					<string></string>
+					<key>sshHost</key>
+					<string>ukm.dev</string>
+					<key>sshKeyLocation</key>
+					<string>~/Dev/ukm.no/vagrant/.vagrant/machines/main/virtualbox/private_key</string>
+					<key>sshKeyLocationEnabled</key>
+					<integer>1</integer>
+					<key>sshPort</key>
+					<string></string>
+					<key>sshUser</key>
+					<string>vagrant</string>
+					<key>sslCACertFileLocation</key>
+					<string></string>
+					<key>sslCACertFileLocationEnabled</key>
+					<integer>0</integer>
+					<key>sslCertificateFileLocation</key>
+					<string></string>
+					<key>sslCertificateFileLocationEnabled</key>
+					<integer>0</integer>
+					<key>sslKeyFileLocation</key>
+					<string></string>
+					<key>sslKeyFileLocationEnabled</key>
+					<integer>0</integer>
+					<key>type</key>
+					<integer>2</integer>
+					<key>useSSL</key>
+					<integer>0</integer>
+					<key>user</key>
+					<string>root</string>
+				</dict>
+				<dict>
+					<key>colorIndex</key>
+					<integer>3</integer>
+					<key>database</key>
+					<string>videoconverter</string>
+					<key>host</key>
+					<string>127.0.0.1</string>
+					<key>id</key>
+					<integer>5242182274205702521</integer>
+					<key>name</key>
+					<string>DEV videoconverter</string>
+					<key>port</key>
+					<string></string>
+					<key>socket</key>
+					<string></string>
+					<key>sshHost</key>
+					<string>videoconverter.ukm.dev</string>
+					<key>sshKeyLocation</key>
+					<string>~/Dev/ukm.no/vagrant/.vagrant/machines/videoconverter/virtualbox/private_key</string>
+					<key>sshKeyLocationEnabled</key>
+					<integer>1</integer>
+					<key>sshUser</key>
+					<string>vagrant</string>
+					<key>sslCACertFileLocation</key>
+					<string></string>
+					<key>sslCACertFileLocationEnabled</key>
+					<integer>0</integer>
+					<key>sslCertificateFileLocation</key>
+					<string></string>
+					<key>sslCertificateFileLocationEnabled</key>
+					<integer>0</integer>
+					<key>sslKeyFileLocation</key>
+					<string></string>
+					<key>sslKeyFileLocationEnabled</key>
+					<integer>0</integer>
+					<key>type</key>
+					<integer>2</integer>
+					<key>useSSL</key>
+					<integer>0</integer>
+					<key>user</key>
+					<string>root</string>
+				</dict>
 			</array>
 			<key>IsExpanded</key>
 			<true/>
