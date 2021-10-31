@@ -3,6 +3,7 @@
 mysql-deps:
     pkg.installed:
         - name: python-mysqldb
+        - name: python3-mysqldb
 
 mysql_debconf:
   debconf.set:
