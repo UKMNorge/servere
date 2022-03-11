@@ -63,6 +63,17 @@ MySQL:
 ```
 
 # Tips på veien
+## MacOS versjon Monterey eller nyere:
+1. Hent siste versjon av VirtualBox
+2. Hvis du får feilmelding om IP out of range da må du opprette /etc/vbox/networks.conf og legge til
+```
+* 10.0.0.0/8 192.168.0.0/16
+* 2001::/64
+```
+3. Hvis du får feilmelding "uninitialized constant VagrantPlugins::HostDarwin::Cap::Version (NameError)", da må du kjøre 
+```
+sudo curl -o /opt/vagrant/embedded/gems/2.2.19/gems/vagrant-2.2.19/plugins/hosts/darwin/cap/path.rb https://raw.githubusercontent.com/hashicorp/vagrant/42db2569e32a69e604634462b633bb14ca20709a/plugins/hosts/darwin/cap/path.rb 
+```
 
 ## MacOs: shared folders
 Hvis du hele tiden må skrive inn host-passordet i OS X for å sette opp networking ifbm. NFS og shared folders kan du gjøre det følgende for å fikse på det:
