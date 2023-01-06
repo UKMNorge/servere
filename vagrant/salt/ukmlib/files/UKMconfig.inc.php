@@ -41,6 +41,7 @@ define('UKM_DELTA_DB_USER', '{{ ukm.database.delta.users.user_read.name }}');
 define('UKM_DELTA_DB_PASSWORD', '{{ ukm.database.delta.users.user_read.pass }}');
 define('UKM_DELTA_DB_WRITE_USER', '{{ ukm.database.delta.users.user_write.name }}');
 define('UKM_DELTA_DB_WRITE_PASSWORD', '{{ ukm.database.delta.users.user_write.pass }}');
+define('UKM_DELTA_SLETT_BRUKER', '{{ ukm.delta.slett_bruker_info.pass }}');
 
 # ID-DB
 define('UKM_ID_DB_HOST', '{{ ukm.database.host }}');

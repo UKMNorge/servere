@@ -23,6 +23,9 @@ ukm:
             address: post@support.ukm.no
             name: UKM Norge support
         reply: support@ukm.no
+    delta:
+        slett_bruker_info:
+            pass: slettBrukerDev
     database:
         host: 127.0.0.1
         ss3:
