@@ -8,7 +8,9 @@ if ( defined( 'COOKIE_DOMAIN' ) ) {
 
 // let the site admin page catch the VHOST == 'no'
 $wpdb->dmtable = $wpdb->base_prefix . 'domain_mapping';
-$dm_domain = $wpdb->escape( $_SERVER[ 'HTTP_HOST' ] );
+
+// Treat the HTTP_HOST as string
+$dm_domain = $wpdb->prepare( "%s", $_SERVER[ 'HTTP_HOST' ] );
 
 if( ( $nowww = preg_replace( '|^www\.|', '', $dm_domain ) ) != $dm_domain )
 	$where = $wpdb->prepare( 'domain IN (%s,%s)', $dm_domain, $nowww );
