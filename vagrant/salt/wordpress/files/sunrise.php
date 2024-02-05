@@ -9,17 +9,20 @@ if ( defined( 'COOKIE_DOMAIN' ) ) {
 // let the site admin page catch the VHOST == 'no'
 $wpdb->dmtable = $wpdb->base_prefix . 'domain_mapping';
 
-// Treat the HTTP_HOST as string
-$dm_domain = $wpdb->prepare( "%s", $_SERVER[ 'HTTP_HOST' ] );
+// Trenger ikke prepare() fordi det kjøres prepare() under på $where
+$dm_domain = $_SERVER[ 'HTTP_HOST' ];
 
-if( ( $nowww = preg_replace( '|^www\.|', '', $dm_domain ) ) != $dm_domain )
-	$where = $wpdb->prepare( 'domain IN (%s,%s)', $dm_domain, $nowww );
-else
-	$where = $wpdb->prepare( 'domain = %s', $dm_domain );
+$nowww = preg_replace( '|^www\.|', '', $dm_domain);
+
+$query = $nowww != $dm_domain 
+    ? $wpdb->prepare("SELECT blog_id FROM {$wpdb->dmtable} WHERE domain IN (%s, %s) ORDER BY CHAR_LENGTH(domain) DESC LIMIT 1", $dm_domain, $nowww)
+    : $wpdb->prepare("SELECT blog_id FROM {$wpdb->dmtable} WHERE domain = %s ORDER BY CHAR_LENGTH(domain) DESC LIMIT 1", $dm_domain);
 
 $wpdb->suppress_errors();
-$domain_mapping_id = $wpdb->get_var( "SELECT blog_id FROM {$wpdb->dmtable} WHERE {$where} ORDER BY CHAR_LENGTH(domain) DESC LIMIT 1" );
+$domain_mapping_id = $wpdb->get_var($query);
 $wpdb->suppress_errors( false );
+
+
 if( $domain_mapping_id ) {
 	$current_blog = $wpdb->get_row("SELECT * FROM {$wpdb->blogs} WHERE blog_id = '$domain_mapping_id' LIMIT 1");
 	$current_blog->domain = $_SERVER[ 'HTTP_HOST' ];
